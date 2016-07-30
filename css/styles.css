@@ -37,6 +37,9 @@
         .form {
             text-align: center;
         }
+        a:hover {
+            text-decoration: none;
+        }
     
         .body-initial {
             background-color: rgba(47,49,53,1); 
