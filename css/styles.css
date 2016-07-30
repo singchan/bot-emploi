@@ -1,4 +1,15 @@
 
+        @font-face {
+          font-family: 'Roboto';
+          src: local('Roboto Thin'), local('Roboto-Thin'), url('https://fonts.gstatic.com/s/roboto/v15/ty9dfvLAziwdqQ2dHoyjphTbgVql8nDJpwnrE27mub0.woff2') format('woff2');
+        }
+        
+        body {
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: 100;
+        }
+    
         .body-initial {
             background-color: rgba(47,49,53,1); 
         }
@@ -196,7 +207,6 @@
             left: 0px; 
             min-height: 782px; 
             background-color: rgba(249,249,249,1); 
-            border-width: 5px 5px 5px 5px ; 
             border-style: solid; 
             border-radius: 5px 5px 5px 5px ; 
         }
