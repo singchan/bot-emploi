@@ -270,10 +270,8 @@
             background-color: transparent; 
         }
         @media only screen and (max-width: 480px), only screen and (max-device-width: 480px){.silex-id-1469913739161-2 {
-            top: 67px; 
+            top: 0px; 
             left: 11px; 
-            width: 409px; 
-            min-height: 711px; 
         }
         }.silex-id-1469915144561-4 {
             min-height: 27px; 
