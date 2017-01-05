@@ -66,7 +66,7 @@
         }
     </style>
     <script type="text/javascript" class="silex-script">
-        if (location.protocol != 'https:') {
+        if (location.protocol != 'https:' && location.href.indexOf('silex.me') === -1) {
             location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
         }
     </script>
@@ -392,6 +392,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-accueil{display:inherit; }
     </style>
@@ -619,6 +621,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 
