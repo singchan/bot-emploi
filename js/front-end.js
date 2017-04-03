@@ -100,12 +100,23 @@ $(function() {
     }
     // set the body size to contain all the elements
     // this has to be done manually since the elements are absolutely positioned
-    bodyEl.css({
-      "min-width": width + "px",
-      "min-height": height + "px"
-    });
+    // only on desktop since in mobile the elements are in the flow
+    if(win.width() >= 480 || !bodyEl.hasClass('enable-mobile')) {
+      bodyEl.css({
+        'min-width': width + 'px',
+        'min-height': height + 'px'
+      });
+    }
+    else {
+      bodyEl.css({
+        'min-width': '',
+        'min-height': ''
+      });
+    }
     // end computation, put back the body to a normal size
     bodyEl.removeClass('compute-body-size-pending');
+    // dispatch an event so that components can update
+    $(document).trigger('silex:resize');
   }, 500);
 
   // only outside silex editor when the window is small enough
@@ -152,10 +163,11 @@ $(function() {
   });
   /**
    * init page system
+   * Use deep links (hash) only when `body.silex-runtime` is defined, i.e. not while editing
    */
   bodyEl.pageable({
     currentPage: firstPageName,
-    useDeeplink:true,
+    useDeeplink: bodyEl.hasClass('silex-runtime'),
     pageClass: 'paged-element'
   });
   /**
