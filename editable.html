@@ -71,7 +71,7 @@
         
         $(function() {
             function resize() {
-                $('.full-height').height($(window).height());
+                $('.full-height').css('min-height', $(window).height());
             }
             resize();
             $(window).on('resize', resize);
