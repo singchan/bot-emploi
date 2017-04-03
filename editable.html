@@ -71,10 +71,12 @@
         
         $(function() {
             function resize() {
+                console.log('xxx')
                 $('.full-height').css('min-height', $(window).height());
             }
             resize();
             $(window).on('resize', resize);
+        //    $(document.body).on('silex:resize', resize);
         })
     </script>
     <style class="silex-inline-styles" type="text/css">
